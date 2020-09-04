@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemoActivity"
+    android:padding="@dimen/padding_20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/parkingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="주차이름"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_21sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모제목"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <EditText
+        android:id="@+id/memoTitleEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모내용"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <EditText
+        android:id="@+id/memoCntEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모날짜"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <EditText
+        android:id="@+id/memoDateEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모위치"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <EditText
+        android:id="@+id/memoGpsEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14sp"/>
+
+    <Button
+        android:id="@+id/btnGoogleMapGO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="구글맵"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="주차 위치를 확인할 수 있는 기둥 또는 장소를 촬영하세요."
+        android:gravity="center"
+        android:textSize="@dimen/text_size_12sp"/>
+
+    <ImageView
+        android:id="@+id/memoImg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ddd"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카메라"
+            android:layout_gravity="right"/>
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앨범"
+            android:layout_gravity="right"/>
+
+        <Button
+            android:id="@+id/btnMemoSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메모저장"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

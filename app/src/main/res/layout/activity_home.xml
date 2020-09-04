@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".HomeActivity"
+    android:paddingTop="@dimen/padding_20dp">
+
+    <ImageView
+        android:id="@+id/homeLogoImg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_logo09_01"
+        app:layout_constraintBottom_toTopOf="@id/btnInParking"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/homeJoinName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/margin_10dp"/>
+
+    <TextView
+        android:id="@+id/homeJoinName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="40dp"
+        android:gravity="left"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/homeLogoImg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homeText02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:text="주차 종류를 선택해주세요."
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintLeft_toRightOf="@id/homeLogoImg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeJoinName" />
+
+    <Button
+        android:id="@+id/btnInParking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/btn_round_box"
+        android:drawableStart="@drawable/ic_swap_calls_24px"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:paddingLeft="@dimen/padding_20dp"
+        android:paddingTop="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/padding_10dp"
+        android:text="실내주차"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintBottom_toTopOf="@id/btnOutParking"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeLogoImg" />
+
+    <Button
+        android:id="@+id/btnOutParking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_round_box"
+        android:drawableStart="@drawable/ic_my_location_24px"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:paddingLeft="@dimen/padding_20dp"
+        android:paddingTop="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/padding_10dp"
+        android:text="야외주차"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnInParking" />
+
+    <Button
+        android:id="@+id/btnMemoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_round_box"
+        android:drawableStart="@drawable/ic_car_24px"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:paddingLeft="@dimen/padding_20dp"
+        android:paddingTop="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/padding_10dp"
+        android:text="차량찾기"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOutParking" />
+
+    <Button
+        android:id="@+id/btnTimerSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_round_box"
+        android:drawableStart="@drawable/ic_timer_24px"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:paddingLeft="@dimen/padding_20dp"
+        android:paddingTop="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/padding_10dp"
+        android:text="타이머 설정"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMemoView" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/btnTimerView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textSize="@dimen/text_size_24sp"-->
+    <!--android:text="타이머 화면"-->
+    <!--android:gravity="center_vertical"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/btnTimerSetting"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--android:background="@drawable/btn_round_box02"-->
+    <!--android:layout_marginStart="40dp"-->
+    <!--android:layout_marginRight="40dp"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--android:paddingLeft="@dimen/padding_20dp"/>-->
+
+    <ImageView
+        android:id="@+id/homeAdCnt"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="#ddd"
+        android:gravity="center_vertical"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnTimerSetting" />
+
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2px"
+        android:layout_marginTop="2px"
+        android:background="#fff"
+        android:text="ad"
+        android:textColor="@color/colorBlue"
+        app:layout_constraintLeft_toLeftOf="@id/homeAdCnt"
+        app:layout_constraintTop_toTopOf="@id/homeAdCnt" />
+
+    <include
+        layout="@layout/item_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

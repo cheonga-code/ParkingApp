@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+    android:paddingLeft="@dimen/padding_20dp"
+    android:paddingRight="@dimen/padding_20dp"
+    android:paddingBottom="@dimen/padding_20dp"
+    android:background="@color/colorBackground">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_logo09"/>
+
+    <EditText
+        android:id="@+id/loginID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:textSize="@dimen/text_size_16sp"
+        android:padding="10dp"
+        android:background="@drawable/round_box_login_edittext"/>
+
+    <EditText
+        android:id="@+id/loginPW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:textSize="@dimen/text_size_16sp"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/round_box_login_edittext"/>
+
+    <CheckBox
+        android:id="@+id/btnAutoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:textSize="@dimen/text_size_18sp"
+        android:text="자동로그인"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="@dimen/text_size_18sp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/btn_round_login"/>
+
+    <Button
+        android:id="@+id/btnJoinGO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="계정이 없으신가요? 회원가입"
+        android:textSize="@dimen/text_size_18sp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/btn_round_join"/>
+
+</LinearLayout>

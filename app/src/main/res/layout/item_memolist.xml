@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:padding="10dp"
+    android:background="@drawable/round_box_memo_item">
+
+    <ImageView
+        android:id="@+id/memoItemImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#ddd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/memoItemSaveTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메모저장시간"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/memoItemTitleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="메모제목"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/memoItemImg"
+        app:layout_constraintRight_toLeftOf="@id/memoItemSaveTimeTv"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/memoItemCntTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="메모내용"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/memoItemTitleTv"
+        app:layout_constraintLeft_toRightOf="@id/memoItemImg"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/memoItemDateTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="메모날짜"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/memoItemCntTv"
+        app:layout_constraintLeft_toRightOf="@id/memoItemImg"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/memoItemGpsTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="메모위치"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/memoItemDateTv"
+        app:layout_constraintLeft_toRightOf="@id/memoItemImg"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"/>
+
+
+    <Button
+        android:id="@+id/btnDeleteMemoItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="삭제"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

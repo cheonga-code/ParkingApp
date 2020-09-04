@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/botNavbarCnt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:menu="@menu/botnav_menu"
+    app:itemBackground="@color/colorNav"
+    android:background="@color/colorNav"
+    app:itemIconTint="@drawable/bottom_navigation_item_colors"
+    app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+    app:itemTextAppearanceInactive="@style/BottomNavigationView"
+    app:labelVisibilityMode="labeled"/>

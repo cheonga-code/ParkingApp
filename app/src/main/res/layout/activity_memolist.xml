@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemolistActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/memoSearchBar"
+        app:queryHint="검색할 키워드를 입력하세요."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.appcompat.widget.SearchView>
+
+    <TextView
+        android:id="@+id/memolistTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="주차 기록 관리"
+        android:textSize="@dimen/text_size_21sp"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/memoSearchBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/boder_bottom"/>
+
+    <TextView
+        android:id="@+id/recyMemoNullTv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="메모 리스트가 존재하지 않습니다."
+        android:textSize="@dimen/text_size_24sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/memolistTitle"
+        app:layout_constraintBottom_toTopOf="@+id/botNavbarCnt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyMemolist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/memolistTitle"
+        app:layout_constraintBottom_toTopOf="@+id/botNavbarCnt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <include
+        layout="@layout/item_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

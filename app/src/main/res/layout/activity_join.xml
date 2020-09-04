@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JoinActivity"
+    android:padding="@dimen/padding_20dp"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_21sp"
+        android:textColor="@color/colorMain"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/margin_20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutJoinName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/joinName"
+            android:hint="이름"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<EditText-->
+        <!--android:id="@+id/joinName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="이름"-->
+        <!--android:textSize="@dimen/text_size_21sp"-->
+        <!--android:layout_margin="@dimen/margin_10dp"/>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutJoinCarNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/joinCarNumber"
+            android:hint="차량번호"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<EditText-->
+        <!--android:id="@+id/joinCarNumber"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="차량번호"-->
+        <!--android:textSize="@dimen/text_size_21sp"-->
+        <!--android:layout_margin="@dimen/margin_10dp"/>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutJoinID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/joinID"
+            android:hint="아이디"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<EditText-->
+        <!--android:id="@+id/joinID"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="아이디"-->
+        <!--android:textSize="@dimen/text_size_21sp"-->
+        <!--android:layout_margin="@dimen/margin_10dp"/>-->
+
+    <Button
+        android:id="@+id/btnCheckID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="중복확인"
+        android:textSize="@dimen/text_size_21sp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_gravity="right"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutJoinPW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/joinPW"
+            android:hint="비밀번호"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<EditText-->
+        <!--android:id="@+id/joinPW"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="비밀번호"-->
+        <!--android:textSize="@dimen/text_size_21sp"-->
+        <!--android:layout_margin="@dimen/margin_10dp"-->
+        <!--android:inputType="textPassword"/>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutJoinPW2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/joinPW2"
+            android:hint="비밀번호 확인"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<EditText-->
+        <!--android:id="@+id/joinPW2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="비밀번호확인"-->
+        <!--android:textSize="@dimen/text_size_21sp"-->
+        <!--android:layout_margin="@dimen/margin_10dp"-->
+        <!--android:inputType="textPassword"/>-->
+
+    <Button
+        android:id="@+id/btnJoinOK"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_18sp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_round_join"
+        android:layout_marginTop="@dimen/margin_20dp"/>
+
+</LinearLayout>

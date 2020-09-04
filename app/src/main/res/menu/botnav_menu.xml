@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<item
+    android:id="@+id/botNav01"
+    android:icon="@drawable/ic_home_24px"
+    android:title="Home"
+    app:showAsAction="ifRoom"/>
+
+<item
+    android:id="@+id/botNav02"
+    android:icon="@drawable/ic_memolist_24px"
+    android:title="ParkingList"
+    app:showAsAction="ifRoom"/>
+
+<item
+    android:id="@+id/botNav03"
+    android:icon="@drawable/ic_local_parking_24px"
+    android:title="Search"
+    app:showAsAction="ifRoom"/>
+
+<item
+    android:id="@+id/botNav04"
+    android:icon="@drawable/ic_person_24px"
+    android:title="MyPage"
+    app:showAsAction="ifRoom"/>
+
+</menu>

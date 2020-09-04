@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="500dp"
+    android:layout_height="700dp"
+    android:padding="@dimen/padding_20dp"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모상세"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_24sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모제목"/>
+
+    <TextView
+        android:id="@+id/detailTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모내용"/>
+
+    <TextView
+        android:id="@+id/detailCntTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모날짜"/>
+
+    <TextView
+        android:id="@+id/detailDateTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모위치"/>
+
+    <TextView
+        android:id="@+id/detailGpsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/detailImg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#ddd"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:id="@+id/btnDetailMemoOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        />
+
+    <Button
+        android:id="@+id/btnShareMemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공유"
+        />
+
+    <Button
+        android:id="@+id/btnEditMemoGO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수정"
+        />
+
+</LinearLayout>

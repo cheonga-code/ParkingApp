@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParkinglotActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/prkSearchBar"
+        app:queryHint="어느 지역의 공용주차장을 찾고계신가요? ex.강남"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/round_box_searchview"
+        android:theme="@style/SearchView">
+    </androidx.appcompat.widget.SearchView>
+
+    <fragment
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/googleMap"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/prkSearchBar"
+        app:layout_constraintBottom_toTopOf="@id/botNavbarCnt">
+
+    </fragment>
+
+    <Button
+        android:id="@+id/btnPlaceSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/googleMap"
+        app:layout_constraintLeft_toLeftOf="@id/googleMap"
+        android:text="장소검색">
+
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/prkSearchCnt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/prkSearchBar"
+        android:background="@drawable/round_box_searchview"
+        android:paddingBottom="@dimen/padding_5dp">
+        <TextView
+            android:id="@+id/recyPrkNullTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="검색하신 데이터가 없습니다."
+            android:textSize="@dimen/text_size_24sp"
+            android:gravity="center"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyPrklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <include
+        layout="@layout/item_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

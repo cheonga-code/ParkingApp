@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.parkingapp">
+    <!-- 외부저장소 권한 설정 -> WRITE 추가하면 읽기/쓰기 다 됨 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 카메라 권한 설정 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--구글 위치 관련 설정-->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--알람 관련 설정-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 구글맵 API 인증키 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBmQ_zv5qZ97HXPwcfaZSEZ1XPDXIb0rIU" />
+
+        <activity android:name=".GoogleActivity"/>
+        <activity android:name=".TimerActivity" /> <!-- 카메라 앱 사진 file 저장위해 provider 사용 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.parkingapp"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider> <!-- 액티비티 -->
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".JoinActivity" />
+        <activity android:name=".ViewActivity" />
+        <activity android:name=".MypageActivity" />
+        <activity android:name=".PriceActivity" />
+        <activity android:name=".MemoActivity" />
+        <activity android:name=".ParkinglotActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".DetailActivity"
+            android:theme="@style/MyTheme.noTitle.Dialog">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+            <!-- <data android:scheme="@string/kakao_scheme" android:host="@string/kakaolink_host" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".EditActivity"
+            android:theme="@style/MyTheme.noTitle.Dialog" />
+        <activity android:name=".MemolistActivity" />
+        <!-- 타이머 알람 관련 -->
+        <receiver android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+        <!--<service android:name=".AlarmService"-->
+            <!--android:enabled="true"/>-->
+    </application>
+
+</manifest>

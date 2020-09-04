@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewActivity"
+    android:padding="@dimen/padding_20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내차찾기"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_24sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모제목"
+        android:textColor="#ff0000"/>
+
+    <ViewSwitcher
+        android:id="@+id/viewTitleSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/viewTitleTv"
+            android:clickable="true"
+            android:onClick="viewTitleTvClicked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/viewTitleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ViewSwitcher>
+
+    <!--<EditText-->
+        <!--android:id="@+id/viewTitleEt"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모내용"
+        android:textColor="#ff0000"/>
+
+    <ViewSwitcher
+        android:id="@+id/viewCntSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/viewCntTv"
+            android:clickable="true"
+            android:onClick="viewCntTvClicked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/viewCntEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ViewSwitcher>
+
+    <!--<EditText-->
+    <!--android:id="@+id/viewCntEt"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모날짜"/>
+
+    <TextView
+        android:id="@+id/viewDateTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="메모위치"/>
+
+    <TextView
+        android:id="@+id/viewGpsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/viewImg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#ddd"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:id="@+id/btnMemoEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메모수정"
+        />
+
+</LinearLayout>

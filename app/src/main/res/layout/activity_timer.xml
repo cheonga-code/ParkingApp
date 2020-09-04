@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimerActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner">
+
+    </TimePicker>
+
+    <TextView
+        android:id="@+id/alarmTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="알람 설정한 시간"
+        android:textSize="@dimen/text_size_24sp"
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/btnAlarmCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="노티피케이션 발생 시키기"/>
+
+    <Button
+        android:id="@+id/btnAlarmRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알림 제거"/>
+
+    <TextView
+        android:id="@+id/timerTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="타이머 시간"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_size_21sp"
+        android:textColor="@color/colorRed"/>
+    <Button
+        android:id="@+id/btnTimerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="타이머 시작"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnTimerStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="타이머 중지"/>
+
+    <TextView
+        android:id="@+id/timerStartTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="시작한 시간"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_21sp"/>
+
+    <TextView
+        android:id="@+id/timerEndTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="끝난 시간"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_21sp"/>
+
+    <TextView
+        android:id="@+id/timerDurationTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="경과 시간"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_21sp"/>
+
+</LinearLayout>
